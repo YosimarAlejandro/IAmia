@@ -53,7 +53,7 @@ async def predict_and_notify(notification: NotificationRequest):
         try:
             # Asegúrate de que el mensaje también esté en UTF-8
             message = "Tu predicción ha sido exitosa."
-            send_email("destination_email@example.com", "Notificación importante", message)
+            send_email("", "Notificación importante", message)
             return {"status": "success", "message": "Notification sent successfully."}
         except Exception as e:
             return {"status": "error", "message": f"Error: {str(e)}"}
